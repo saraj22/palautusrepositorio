@@ -26,7 +26,6 @@ class TestKassapaate(unittest.TestCase):
     
     def test_kortille_ladataan_rahaa_jos_summa_positiivinen(self):
         maksukortti_mock = Mock()
-        #maksukortti_mock.saldo.return_value = 10
         
         self.kassa.lataa(maksukortti_mock, 10)
 
@@ -34,7 +33,6 @@ class TestKassapaate(unittest.TestCase):
 
     def test_kortille_ei_ladata_rahaa_jos_summa_negatiivinen(self):
         maksukortti_mock = Mock()
-        #maksukortti_mock.saldo.return_value = 10
         
         self.kassa.lataa(maksukortti_mock, -5)
 
